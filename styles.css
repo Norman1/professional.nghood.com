@@ -1,0 +1,153 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Light gray background for overall professionalism */
+}
+
+/* Navbar Styles */
+/* Navbar Styles */
+nav {
+    flex: 1;
+    min-width: 200px;
+    max-width: 280px; /* This sets the maximum width for the navbar */
+    height: 100vh;
+    background-color: #2c3e50; /* Darker shade for navigation */
+    position: sticky;
+    top: 0;
+}
+
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav li {
+    padding: 10px 20px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #ecf0f1; /* Light color for nav links for contrast */
+    display: block;
+}
+
+.nav-link.active, .nav-link:hover {
+    background-color: #34495e; /* Slightly lighter shade for active/hover state */
+}
+
+/* Main Content Styles */
+main {
+    flex: 3;
+    padding: 40px;
+    background-color: #ecf0f1; /* Light color background for content */
+}
+
+.profile-image {
+    float: left; /* This makes the image float to the left, allowing text to wrap around it */
+    margin-right: 20px; /* Add some space between the image and text */
+    max-width: 150px; /* Control the size of the image */
+    border-radius: 50%; /* Makes the image circular */
+}
+
+/* Clear float after the image for following elements */
+#profile::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive Design: Move image to top for smaller screens */
+@media (max-width: 768px) {
+    .profile-image {
+        float: none; /* Remove float */
+        display: block; /* Make it a block element */
+        margin: 0 auto 20px; /* Center the image and add margin at the bottom */
+    }
+}
+
+
+
+
+
+
+h1, h2, h3 {
+    color: rgb(84, 182, 137); /* Greenish color for headings */
+}
+
+section {
+    max-width: 1500px;
+    margin-bottom: 50px;
+    padding: 20px;
+    background-color: #ffffff; /* White background for sections for readability */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+    border-radius: 8px; /* Rounded corners */
+}
+
+img {
+    max-width: 150px;
+}
+
+/* Footer Styles */
+footer {
+    max-width: 1540px;
+    background-color: #2c3e50;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-link {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #ecf0f1; /* Light color for footer links for contrast */
+    transition: color 0.3s;
+}
+
+.footer-link:hover {
+    color: #bdc3c7; /* Slightly lighter color on hover for footer links */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+
+    nav {
+        height: auto;
+        min-width: 100%;
+        position: relative;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    .certificates-container {
+        display: flex;
+        flex-wrap: wrap; /* Allows items to wrap onto the next line if necessary */
+        gap: 20px; /* Provides spacing between items */
+        align-items: center; /* Centers items vertically */
+    }
+
+    .certificates-container a {
+        margin-right: 20px; /* Space between each certificate */
+        display: block; /* Ensures the entire badge is clickable */
+    }
+
+
+
+
+}
